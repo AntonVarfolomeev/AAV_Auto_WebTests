@@ -10,7 +10,7 @@ class LoginPageLocators:
     FORGOT_PASSWORD_BUTTON = (By.XPATH, "//*[@data-l='t,restore']")
     REGISTER_BUTTON = (By.XPATH, "//*[@data-l='t,register']")
     LOGIN_TAB_BUTTON = (By.XPATH, "//*[@data-l='t,login_tab']")
-    QR_CODE_TAB_BUTTON (By.XPATH, "//*[@data-l='t,qr_tab']")
+    QR_CODE_TAB_BUTTON = (By.XPATH, "//*[@data-l='t,qr_tab']")
     VK_LOGIN_BUTTON = (By.XPATH, "//*[@data-l='t,vkc']")
     MAIL_LOGIN_BUTTON = (By.XPATH, "//*[@data-l='t,mailru']")
     YANDEX_LOGIN_BUTTON = (By.XPATH, "//*[@data-l='t,yandex']")
