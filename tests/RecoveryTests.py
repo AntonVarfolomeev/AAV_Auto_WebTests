@@ -9,7 +9,7 @@ from conftest import username
 BASE_URL = 'https://ok.ru/'
 PASSWORD_TEXT = '1'
 
-@allure.suite('Проверка восстановления данных пользователя')
+@allure.suite('Проверка экрана восстановления данных')
 @allure.title('Проверка перехода к восстановлению после нескольких неудачных попыток авторизации')
 def test_go_to_recovery_after_multiple_fails(browser, username):
     BasePage(browser).get_url(BASE_URL)
