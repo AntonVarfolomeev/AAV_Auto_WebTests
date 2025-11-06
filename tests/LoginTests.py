@@ -1,7 +1,7 @@
 import allure
 
 from core.BaseTest import browser
-from pages.BasePage import BasePage
+from pages.BasePage import BasePageHelper
 from pages.LoginPage import LoginPageHelper
 from conftest import username
 
@@ -14,7 +14,7 @@ WRONG_PASSWORD_ERROR = 'Неправильно указан логин и/или
 @allure.suite('Проверка формы авторизации')
 @allure.title('Проверка ошибки при пустой форме авторизации')
 def test_empty_login_and_password(browser):
-    BasePage(browser).get_url(BASE_URL)
+    BasePageHelper(browser).get_url(BASE_URL)
     LoginPage = LoginPageHelper(browser)
     LoginPage.click_login()
     assert LoginPage.get_error_text() == EMPTY_LOGIN_ERROR
@@ -22,7 +22,7 @@ def test_empty_login_and_password(browser):
 @allure.suite('Проверка формы авторизации')
 @allure.title('Проверка ошибки при введенном login, но пустым password')
 def test_empty_password(browser, username):
-    BasePage(browser).get_url(BASE_URL)
+    BasePageHelper(browser).get_url(BASE_URL)
     LoginPage = LoginPageHelper(browser)
     LoginPage.type_login(username)
     LoginPage.click_login()
@@ -31,7 +31,7 @@ def test_empty_password(browser, username):
 @allure.suite('Проверка формы авторизации')
 @allure.title('Проверка ошибки при неверном пароле')
 def test_wrong_password(browser, username):
-    BasePage(browser).get_url(BASE_URL)
+    BasePageHelper(browser).get_url(BASE_URL)
     LoginPage = LoginPageHelper(browser)
     LoginPage.type_login(username)
     LoginPage.type_password(WRONG_PASSWORD)
