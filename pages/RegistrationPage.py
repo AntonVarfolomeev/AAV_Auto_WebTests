@@ -12,7 +12,7 @@ class RegistrationPageLocators:
     SUPPORT_BUTTON = (By.XPATH, '//*[@data-l="t,support"]')
 
 
-class RegistrationPageHelperHelper(BasePageHelper):
+class RegistrationPageHelper(BasePageHelper):
     def __init__(self, driver):
         self.driver = driver
         self.check_page()
