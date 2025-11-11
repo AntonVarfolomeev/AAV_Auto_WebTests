@@ -1,0 +1,6 @@
+selenium>=4.0.0
+pytest>=7.0.0
+faker>=18.0.0
+allure-pytest>=2.9.0
+attrs>=22.0.0
+
