@@ -44,11 +44,6 @@ class HelpPageHelper(BasePageHelper):
         self.find_element(HelpPageLocators.ADVERTISEMENT_CABINET)
 
 
-    def check_page(self):
-        with allure.step('Проверяем корректность загрузки страницы'):
-            self.attach_screenshot()
-
-
     def scrollToitem(self, locator):
         with allure.step('Скроллим страницу и кликаем на нужный элемент'):
             scroll_item = self.find_element(locator)
