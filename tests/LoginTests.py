@@ -35,5 +35,5 @@ def test_wrong_password(browser, username):
     LoginPage = LoginPageHelper(browser)
     LoginPage.type_login(username)
     LoginPage.type_password(WRONG_PASSWORD)
-    LoginPage.type_login()
+    LoginPage.click_login()
     assert LoginPage.get_error_text() == WRONG_PASSWORD_ERROR
